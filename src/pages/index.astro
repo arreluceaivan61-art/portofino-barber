@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Footer from '../components/Footer.astro'; 
+---
+
+<Layout title="PortoFino Barber Studio | Surquillo">
+	<Navbar />
+	<main>
+		<!-- Hero Section -->
+		<section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+			<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074')] bg-cover bg-center opacity-30"></div>
+			<div class="relative z-10 text-center px-4">
+				<h2 class="text-gold-500 text-sm md:text-base tracking-[0.6em] uppercase mb-4">Bienvenido a la excelencia</h2>
+				<h1 class="text-6xl md:text-9xl font-bold mb-6 tracking-tighter text-white uppercase">Estilo que <span class="text-gold-500 italic">define.</span></h1>
+				<p class="text-zinc-400 max-w-xl mx-auto text-lg mb-10 font-light leading-relaxed">Transformamos tu imagen con técnicas tradicionales y tendencias modernas en el corazón de Surquillo.</p>
+				<div class="flex gap-4 justify-center">
+					<a href="#servicios" class="border border-gold-500 text-gold-500 px-10 py-4 hover:bg-gold-500 hover:text-black transition-all uppercase text-xs tracking-[0.3em] font-bold">Ver Servicios</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección de Servicios -->
+		<section id="servicios" class="py-32 px-6 bg-matte">
+			<div class="max-w-6xl mx-auto">
+				<div class="text-center mb-20">
+					<h2 class="text-gold-500 tracking-[0.4em] uppercase text-xs mb-2">Nuestra Carta</h2>
+					<h3 class="text-5xl font-bold text-white uppercase">Servicios Premium</h3>
+				</div>
+				
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<ServiceCard 
+						nombre="Corte de Autor" 
+						precio="S/ 50" 
+						descripcion="Asesoría de imagen personalizada, lavado premium y acabado con productos de alta gama."
+					/>
+					<ServiceCard 
+						nombre="Ritual de Barba" 
+						precio="S/ 35" 
+						descripcion="Toallas calientes, aceites esenciales y perfilado con navaja para un acabado impecable."
+					/>
+					<ServiceCard 
+						nombre="PortoFino Combo" 
+						precio="S/ 75" 
+						descripcion="Experiencia completa: Corte de autor + Ritual de barba con hidratación facial de cortesía."
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sección de Galería -->
+		<section id="galeria" class="py-20 bg-zinc-950 px-6">
+			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
+					<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500" alt="Corte 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
+				</div>
+				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
+					<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=500" alt="Corte 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
+				</div>
+				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
+					<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=500" alt="Corte 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
+				</div>
+				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
+					<!-- Cambio a Pexels para evitar el bloqueo de Unsplash -->
+					<img src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Corte 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

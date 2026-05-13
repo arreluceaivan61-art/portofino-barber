@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="PortoFino Barber Studio - Excelencia en cada corte" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="bg-matte text-zinc-100 font-['Inter']">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	h1, h2, h3 {
+		font-family: 'Playfair Display', serif;
+	}
+	/* Personalización de la barra de desplazamiento */
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background: #0F0F0F;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #C5A059;
+		border-radius: 10px;
+	}
+</style>

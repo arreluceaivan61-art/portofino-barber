@@ -35,7 +35,7 @@ import Footer from '../components/Footer.astro';
 		</section>
 
 		<!-- Frase de Autor -->
-		<section class="py-20 bg-black text-center px-6">
+		<section class="py-16 md:py-20 bg-black text-center px-6">
 			<div class="max-w-4xl mx-auto reveal">
 				<span class="text-amber-500/30 text-6xl font-accent italic">“</span>
 				<p class="text-2xl md:text-3xl font-accent italic text-zinc-400 -mt-8 leading-snug">
@@ -45,12 +45,11 @@ import Footer from '../components/Footer.astro';
 		</section>
 
 		<!-- Sección de Servicios -->
-		<section id="servicios" class="relative py-32 px-6 bg-[#050505]">
-			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-amber-500/50 to-transparent"></div>
+		<section id="servicios" class="relative py-16 md:py-32 px-6 bg-[#050505]">
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 md:h-32 bg-gradient-to-b from-amber-500/50 to-transparent"></div>
 			<div class="max-w-6xl mx-auto">
-				<div class="text-center mb-24 reveal">
+				<div class="text-center mb-16 md:mb-24 reveal">
 					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Nuestra Carta</h2>
-					<!-- SOLUCIÓN DEFINITIVA: Texto fluido (9vw) para que NUNCA se desborde en móvil -->
 					<h3 class="text-[9vw] md:text-7xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">
 						Experiencia <span class="font-accent italic font-light lowercase text-amber-200/50 block md:inline tracking-normal not-italic">Premium</span>
 					</h3>
@@ -76,11 +75,10 @@ import Footer from '../components/Footer.astro';
 		</section>
 
 		<!-- Sección de Club -->
-		<section id="club" class="py-32 px-6 bg-black">
+		<section id="club" class="py-16 md:py-32 px-6 bg-black">
 			<div class="max-w-6xl mx-auto">
-				<div class="text-center mb-16 reveal">
+				<div class="text-center mb-12 md:mb-16 reveal">
 					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Fidelidad</h2>
-					<!-- Unificado con el mismo estilo de texto fluido -->
 					<h3 class="text-[9vw] md:text-6xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">Club PortoFino</h3>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
@@ -103,10 +101,10 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- SECCIÓN CORREGIDA: The Shop centrada y con fuente coherente -->
-		<section id="productos" class="py-32 px-6 bg-[#050505]">
+		<!-- Sección de Productos corregida -->
+		<section id="productos" class="py-16 md:py-32 px-6 bg-[#050505]">
 			<div class="max-w-6xl mx-auto">
-				<div class="flex flex-col items-center text-center mb-16 gap-4 reveal">
+				<div class="flex flex-col items-center text-center mb-12 md:mb-16 gap-4 reveal">
 					<div>
 						<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-2 font-title font-bold">The Shop</h2>
 						<h3 class="text-[9vw] md:text-6xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">
@@ -124,7 +122,7 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<section id="galeria" class="py-20 bg-black px-6">
+		<section id="galeria" class="py-16 md:py-20 bg-black px-6">
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 reveal">
 				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
 					<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=500" alt="Corte 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
@@ -141,7 +139,7 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<section id="citas" class="py-32 bg-[#050505] text-center px-6 relative overflow-hidden">
+		<section id="citas" class="py-16 md:py-32 bg-[#050505] text-center px-6 relative overflow-hidden">
 			<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
 			<div class="max-w-3xl mx-auto relative z-10 reveal">
 				<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Disponibilidad</h2>
@@ -187,7 +185,6 @@ import Footer from '../components/Footer.astro';
 </script>
 
 <style is:global>
-	/* Forzar que las tarjetas dentro de los contenedores ocupen todo el alto */
 	#servicios .reveal-step, 
 	#club .reveal-step {
 		display: flex !important;

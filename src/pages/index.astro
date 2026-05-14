@@ -50,7 +50,8 @@ import Footer from '../components/Footer.astro';
 			<div class="max-w-6xl mx-auto">
 				<div class="text-center mb-24 reveal">
 					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Nuestra Carta</h2>
-					<h3 class="text-5xl md:text-7xl font-title font-bold text-white uppercase tracking-tight">Experiencia <span class="font-accent italic font-light lowercase text-amber-200/50">Premium</span></h3>
+					<!-- AJUSTE: text-5xl para móvil para que quepa "EXPERIENCIA" -->
+					<h3 class="text-5xl md:text-7xl font-title font-bold text-white uppercase tracking-tight break-words">Experiencia <span class="font-accent italic font-light lowercase text-amber-200/50 block md:inline">Premium</span></h3>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 					<div class="reveal-step flex h-full" style="transition-delay: 100ms;">
@@ -77,6 +78,7 @@ import Footer from '../components/Footer.astro';
 			<div class="max-w-6xl mx-auto">
 				<div class="text-center mb-16 reveal">
 					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Fidelidad</h2>
+					<!-- AJUSTE: text-4xl para móvil -->
 					<h3 class="text-4xl md:text-6xl font-title font-bold text-white uppercase italic">Club PortoFino</h3>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
@@ -181,9 +183,7 @@ import Footer from '../components/Footer.astro';
 </script>
 
 <style is:global>
-	/* REGLAS DE AJUSTE DE ALTURA (Solución para image_840100.png) */
-	
-	/* 1. Forzamos que el componente MembershipCard y ServiceCard ocupen el 100% */
+	/* Forzar que las tarjetas dentro de los contenedores ocupen todo el alto */
 	#servicios .reveal-step, 
 	#club .reveal-step {
 		display: flex !important;
@@ -197,7 +197,6 @@ import Footer from '../components/Footer.astro';
 		height: 100% !important;
 	}
 
-	/* 2. Seleccionamos el primer hijo de los componentes (generalmente un article o div) */
 	#servicios .reveal-step > div > *,
 	#club .reveal-step > div > * {
 		flex: 1 1 auto !important;

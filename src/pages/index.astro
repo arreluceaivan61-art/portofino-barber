@@ -2,71 +2,177 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import MembershipCard from '../components/MembershipCard.astro';
+import ProductCard from '../components/ProductCard.astro';
 import Footer from '../components/Footer.astro'; 
 ---
 
 <Layout title="PortoFino Barber Studio | Surquillo">
 	<Navbar />
-	<main>
+	
+	<main class="bg-black">
 		<!-- Hero Section -->
 		<section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
-			<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074')] bg-cover bg-center opacity-30"></div>
-			<div class="relative z-10 text-center px-4">
-				<h2 class="text-gold-500 text-sm md:text-base tracking-[0.6em] uppercase mb-4">Bienvenido a la excelencia</h2>
-				<h1 class="text-6xl md:text-9xl font-bold mb-6 tracking-tighter text-white uppercase">Estilo que <span class="text-gold-500 italic">define.</span></h1>
-				<p class="text-zinc-400 max-w-xl mx-auto text-lg mb-10 font-light leading-relaxed">Transformamos tu imagen con técnicas tradicionales y tendencias modernas en el corazón de Surquillo.</p>
-				<div class="flex gap-4 justify-center">
-					<a href="#servicios" class="border border-gold-500 text-gold-500 px-10 py-4 hover:bg-gold-500 hover:text-black transition-all uppercase text-xs tracking-[0.3em] font-bold">Ver Servicios</a>
+			<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-[2]"></div>
+			<div id="hero-bg" class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1920')] bg-cover bg-center opacity-50 z-[1] will-change-transform scale-105"></div>
+			
+			<div class="relative z-10 text-center px-4 reveal">
+				<h2 class="text-amber-400 text-xs md:text-sm tracking-[1em] uppercase mb-6 font-medium text-cinzel">Bienvenido a la excelencia</h2>
+				<h1 class="text-6xl md:text-9xl font-extrabold mb-8 tracking-tighter text-white uppercase leading-none">
+					Estilo que <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-500 to-amber-100 italic">define.</span>
+				</h1>
+				<div class="w-24 h-px bg-amber-500/50 mx-auto mb-8"></div>
+				<p class="text-zinc-300 max-w-xl mx-auto text-lg mb-12 font-light leading-relaxed">
+					Transformamos tu imagen con técnicas tradicionales y tendencias modernas en el corazón de <span class="text-white font-normal border-b border-amber-500/50">Surquillo</span>.
+				</p>
+				<div class="flex justify-center">
+					<a href="#servicios" class="group relative overflow-hidden border border-amber-500/50 text-white px-14 py-5 transition-all uppercase text-[10px] tracking-[0.5em] font-bold">
+						<span class="relative z-10 group-hover:text-black transition-colors duration-300">Explorar Servicios</span>
+						<div class="absolute inset-0 bg-amber-500 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+					</a>
 				</div>
+			</div>
+		</section>
+
+		<!-- Frase de Autor -->
+		<section class="py-20 bg-black text-center px-6">
+			<div class="max-w-4xl mx-auto reveal">
+				<span class="text-amber-500/30 text-6xl italic">“</span>
+				<p class="text-2xl md:text-3xl italic text-zinc-400 -mt-8 leading-snug">
+					En PortoFino, no solo cortamos el cabello, <span class="text-zinc-200">esculpimos tu identidad</span> con la precisión de la vieja escuela.
+				</p>
 			</div>
 		</section>
 
 		<!-- Sección de Servicios -->
-		<section id="servicios" class="py-32 px-6 bg-matte">
+		<section id="servicios" class="relative py-32 px-6 bg-[#050505]">
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-amber-500/50 to-transparent"></div>
 			<div class="max-w-6xl mx-auto">
-				<div class="text-center mb-20">
-					<h2 class="text-gold-500 tracking-[0.4em] uppercase text-xs mb-2">Nuestra Carta</h2>
-					<h3 class="text-5xl font-bold text-white uppercase">Servicios Premium</h3>
+				<div class="text-center mb-24 reveal">
+					<h2 class="text-amber-500 tracking-[0.6em] uppercase text-[10px] mb-4 font-bold">Nuestra Carta</h2>
+					<h3 class="text-5xl md:text-7xl font-bold text-white uppercase tracking-tight">Experiencia <span class="italic font-light lowercase text-amber-200/50">Premium</span></h3>
 				</div>
-				
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<ServiceCard 
-						nombre="Corte de Autor" 
-						precio="S/ 50" 
-						descripcion="Asesoría de imagen personalizada, lavado premium y acabado con productos de alta gama."
-					/>
-					<ServiceCard 
-						nombre="Ritual de Barba" 
-						precio="S/ 35" 
-						descripcion="Toallas calientes, aceites esenciales y perfilado con navaja para un acabado impecable."
-					/>
-					<ServiceCard 
-						nombre="PortoFino Combo" 
-						precio="S/ 75" 
-						descripcion="Experiencia completa: Corte de autor + Ritual de barba con hidratación facial de cortesía."
-					/>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="reveal-step" style="transition-delay: 100ms;">
+						<ServiceCard nombre="Corte de Autor" precio="S/ 50" descripcion="Asesoría de imagen personalizada, lavado premium y acabado con productos de alta gama." />
+					</div>
+					<div class="reveal-step" style="transition-delay: 300ms;">
+						<ServiceCard nombre="Ritual de Barba" precio="S/ 35" descripcion="Toallas calientes, aceites esenciales y perfilado con navaja para un acabado impecable." />
+					</div>
+					<div class="reveal-step" style="transition-delay: 500ms;">
+						<ServiceCard nombre="PortoFino Combo" precio="S/ 75" descripcion="Experiencia completa: Corte de autor + Ritual de barba con hidratación facial de cortesía." />
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Sección de Galería -->
-		<section id="galeria" class="py-20 bg-zinc-950 px-6">
-			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
-					<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500" alt="Corte 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
+		<!-- Sección de Club -->
+		<section id="club" class="py-32 px-6 bg-black">
+			<div class="max-w-6xl mx-auto">
+				<div class="text-center mb-16 reveal">
+					<h2 class="text-amber-500 tracking-[0.6em] uppercase text-[10px] mb-4 font-bold">Fidelidad</h2>
+					<h3 class="text-4xl md:text-6xl font-bold text-white uppercase italic">Club PortoFino</h3>
 				</div>
-				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
-					<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=500" alt="Corte 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
-				</div>
-				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
-					<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=500" alt="Corte 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
-				</div>
-				<div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden">
-					<!-- Cambio a Pexels para evitar el bloqueo de Unsplash -->
-					<img src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Corte 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 opacity-60 hover:opacity-100" />
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div class="reveal-step" style="transition-delay: 100ms;">
+						<MembershipCard plan="Silver" precio="S/ 120" beneficios={["2 Cortes al mes", "Lavado premium", "10% dto productos"]} />
+					</div>
+					<div class="reveal-step" style="transition-delay: 300ms;">
+						<MembershipCard plan="Gold" precio="S/ 180" popular={true} beneficios={["Cortes ilimitados", "Perfilado de barba", "Bebida de cortesía", "20% dto productos"]} />
+					</div>
+					<div class="reveal-step" style="transition-delay: 500ms;">
+						<MembershipCard plan="Black" precio="S/ 250" beneficios={["Acceso total VIP", "Tratamiento facial", "Cerveza artesanal", "Kit bienvenida"]} />
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<!-- Sección de Productos -->
+		<section id="productos" class="py-32 px-6 bg-[#050505]">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal">
+					<div>
+						<h2 class="text-amber-500 tracking-[0.6em] uppercase text-[10px] mb-4 font-bold">The Shop</h2>
+						<h3 class="text-4xl md:text-6xl font-bold text-white uppercase">Grooming <span class="italic font-light lowercase">Store</span></h3>
+					</div>
+					<p class="text-zinc-500 max-w-xs text-sm italic">Ritual diario de alta gama en casa.</p>
+				</div>
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
+					<ProductCard tipo="Pomada" nombre="Matte Clay" imagen="https://images.unsplash.com/photo-1590159763121-7f9fd312190d?auto=format&fit=crop&q=80&w=400" />
+					<ProductCard tipo="Aceite" nombre="Beard Oil" imagen="https://images.unsplash.com/photo-1626285493836-339249767222?auto=format&fit=crop&q=80&w=400" />
+					<ProductCard tipo="Cera" nombre="Styling Wax" imagen="https://images.unsplash.com/photo-1634439064402-f38b2586b3e7?auto=format&fit=crop&q=80&w=400" />
+					<ProductCard tipo="Aftershave" nombre="Cooling Mist" imagen="https://images.unsplash.com/photo-1594124359055-680456108169?auto=format&fit=crop&q=80&w=400" />
+				</div>
+			</div>
+		</section>
+
+		<!-- Galería -->
+		<section id="galeria" class="py-20 bg-black px-6">
+			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 reveal">
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=500" alt="Corte 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=500" alt="Corte 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=500" alt="Corte 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Corte 4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+			</div>
+		</section>
+
+        <!-- Sección de Citas -->
+        <section id="citas" class="py-32 bg-[#050505] text-center px-6 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+            <div class="max-w-3xl mx-auto relative z-10 reveal">
+                <h2 class="text-amber-500 tracking-[0.6em] uppercase text-[10px] mb-4 font-bold">Disponibilidad</h2>
+                <h3 class="text-4xl md:text-6xl font-bold text-white uppercase mb-8">Reserva tu <span class="italic font-light lowercase text-amber-200/50">Turno</span></h3>
+                <p class="text-zinc-400 text-lg mb-12 leading-relaxed">
+                    Asegura tu espacio y evita esperas. Nuestro equipo está listo para brindarte el mejor servicio personalizado.
+                </p>
+                <a href="https://wa.me/51930667583?text=Hola%20PortoFino!%20💈%20Vengo%20de%20la%20página%20web%20y%20me%20gustaría%20agendar%20una%20cita%20para%20un%20servicio%20premium." target="_blank" class="inline-block group relative px-12 py-5 bg-amber-500 text-black font-bold uppercase text-xs tracking-[0.3em] overflow-hidden transition-all duration-300">
+                    <span class="relative z-10 group-hover:text-white transition-colors duration-300">Agendar por WhatsApp</span>
+                    <div class="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                </a>
+                <div class="mt-12 flex justify-center gap-8 text-zinc-500 text-[10px] uppercase tracking-widest font-medium">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-amber-500/50">Lunes - Sábado</span>
+                        <span>10:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="w-px h-8 bg-white/10"></div>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-amber-500/50">Domingo</span>
+                        <span>11:00 AM - 07:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 	</main>
 	<Footer />
 </Layout>
+
+<script>
+	window.addEventListener('scroll', () => {
+		const bg = document.querySelector('#hero-bg');
+		const scroll = window.pageYOffset;
+		if (bg) { (bg as HTMLElement).style.transform = `translateY(${scroll * 0.4}px)`; }
+	});
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) entry.target.classList.add('active');
+		});
+	}, { threshold: 0.1 });
+
+	document.querySelectorAll('.reveal, .reveal-step').forEach(el => observer.observe(el));
+</script>
+
+<style>
+	.reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+	.reveal.active { opacity: 1; transform: translateY(0); }
+	.reveal-step { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
+	.reveal-step.active { opacity: 1; transform: translateY(0); }
+</style>

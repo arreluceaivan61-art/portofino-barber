@@ -7,35 +7,61 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="PortoFino Barber Studio - Excelencia en cada corte" />
+		<meta name="description" content="PortoFino Barber Studio - Excelencia en cada corte en Surquillo" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+		<!-- Fuentes: Cinzel (Títulos), Playfair (Cursivas Elegantes), Montserrat (Lectura) -->
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body class="bg-matte text-zinc-100 font-['Inter']">
+	<body class="bg-[#050505] text-zinc-100 font-['Montserrat'] selection:bg-amber-500/30 selection:text-amber-200">
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-	h1, h2, h3 {
-		font-family: 'Playfair Display', serif;
+	:root {
+		--gold-primary: #C5A059;
+		--black-matte: #050505;
 	}
-	/* Personalización de la barra de desplazamiento */
+
+	/* Títulos con Cinzel para look de barbería clásica/lujo */
+	h1, h2, h3 {
+		font-family: 'Cinzel', serif;
+		letter-spacing: -0.02em;
+	}
+
+	/* Cursivas y acentos con Playfair Display */
+	.italic, font-serif, .font-serif {
+		font-family: 'Playfair Display', serif !important;
+	}
+
+	/* Suavizado de toda la página */
+	html, body {
+		overflow-x: hidden;
+		background-color: var(--black-matte);
+	}
+
+	/* Estilización de la barra de desplazamiento mejorada */
 	::-webkit-scrollbar {
-		width: 8px;
+		width: 6px;
 	}
 	::-webkit-scrollbar-track {
-		background: #0F0F0F;
+		background: #050505;
 	}
 	::-webkit-scrollbar-thumb {
-		background: #C5A059;
-		border-radius: 10px;
+		background: linear-gradient(to bottom, #C5A059, #8c6d31);
+		border-radius: 0;
+	}
+
+	/* Optimizaciones de renderizado */
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 </style>

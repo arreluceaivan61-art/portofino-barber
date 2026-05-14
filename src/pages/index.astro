@@ -33,36 +33,36 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<section class="py-8 md:py-20 bg-black text-center px-6">
+		<section class="py-16 md:py-20 bg-black text-center px-6">
 			<div class="max-w-4xl mx-auto reveal">
 				<span class="text-amber-500/30 text-6xl font-accent italic">“</span>
 				<p class="text-2xl md:text-3xl font-accent italic text-zinc-400 -mt-8 leading-snug">
-					En PortoFino, no solo cortamos el cabello, <span class="text-zinc-200 not-italic font-title text-xl uppercase tracking-widest">esculpimos tu identidad</span>
+					En PortoFino, no solo cortamos el cabello, <span class="text-zinc-200 not-italic font-title text-xl uppercase tracking-widest">esculpimos tu identidad</span> con la precisión de la vieja escuela.
 				</p>
 			</div>
 		</section>
 
-		<section id="servicios" class="relative py-8 md:py-32 px-6 bg-[#050505]">
-			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 md:h-32 bg-gradient-to-b from-amber-500/50 to-transparent"></div>
+		<section id="servicios" class="relative py-16 md:py-32 px-6 bg-[#050505]">
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 md:h-32 bg-gradient-to-b from-amber-500/50 to-transparent"></div>
 			<div class="max-w-6xl mx-auto">
-				<div class="text-center mb-8 md:mb-24 reveal">
-					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-2 font-title font-bold">Nuestra Carta</h2>
-					<h3 class="text-[9vw] md:text-7xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">
+				<div class="text-center mb-16 md:mb-24 reveal">
+					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Nuestra Carta</h2>
+					<h3 class="text-[8.5vw] md:text-7xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">
 						Experiencia <span class="font-accent italic font-light lowercase text-amber-200/50 block md:inline tracking-normal not-italic">Premium</span>
 					</h3>
 				</div>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-					<div class="reveal-step flex h-full">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+					<div class="reveal-step flex h-full" style="transition-delay: 100ms;">
 						<div class="w-full h-full flex flex-col">
 							<ServiceCard nombre="Corte de Autor" precio="S/ 50" descripcion="Asesoría de imagen personalizada, lavado premium y acabado con productos de alta gama." />
 						</div>
 					</div>
-					<div class="reveal-step flex h-full">
+					<div class="reveal-step flex h-full" style="transition-delay: 300ms;">
 						<div class="w-full h-full flex flex-col">
 							<ServiceCard nombre="Ritual de Barba" precio="S/ 35" descripcion="Toallas calientes, aceites esenciales y perfilado con navaja para un acabado impecable." />
 						</div>
 					</div>
-					<div class="reveal-step flex h-full">
+					<div class="reveal-step flex h-full" style="transition-delay: 500ms;">
 						<div class="w-full h-full flex flex-col">
 							<ServiceCard nombre="PortoFino Combo" precio="S/ 75" descripcion="Experiencia completa: Corte de autor + Ritual de barba con hidratación facial de cortesía." />
 						</div>
@@ -71,24 +71,24 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<section id="club" class="py-8 md:py-32 px-6 bg-black">
+		<section id="club" class="py-16 md:py-32 px-6 bg-black">
 			<div class="max-w-6xl mx-auto">
-				<div class="text-center mb-8 reveal">
-					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-2 font-title font-bold">Fidelidad</h2>
+				<div class="text-center mb-12 md:mb-16 reveal">
+					<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Fidelidad</h2>
 					<h3 class="text-[9vw] md:text-6xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">Club PortoFino</h3>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-					<div class="reveal-step flex h-full">
+					<div class="reveal-step flex h-full" style="transition-delay: 100ms;">
 						<div class="w-full h-full flex flex-col">
 							<MembershipCard plan="Silver" precio="S/ 120" beneficios={["2 Cortes al mes", "Lavado premium", "10% dto productos"]} />
 						</div>
 					</div>
-					<div class="reveal-step flex h-full">
+					<div class="reveal-step flex h-full" style="transition-delay: 300ms;">
 						<div class="w-full h-full flex flex-col">
 							<MembershipCard plan="Gold" precio="S/ 180" popular={true} beneficios={["Cortes ilimitados", "Perfilado de barba", "Bebida de cortesía", "20% dto productos"]} />
 						</div>
 					</div>
-					<div class="reveal-step flex h-full">
+					<div class="reveal-step flex h-full" style="transition-delay: 500ms;">
 						<div class="w-full h-full flex flex-col">
 							<MembershipCard plan="Black" precio="S/ 250" beneficios={["Acceso total VIP", "Tratamiento facial", "Cerveza artesanal", "Kit bienvenida"]} />
 						</div>
@@ -97,18 +97,18 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<section id="productos" class="py-8 md:py-32 px-6 bg-[#050505]">
+		<section id="productos" class="py-16 md:py-32 px-6 bg-[#050505]">
 			<div class="max-w-6xl mx-auto">
-				<div class="flex flex-col items-center text-center mb-8 gap-2 reveal">
+				<div class="flex flex-col items-center text-center mb-12 md:mb-16 gap-4 reveal">
 					<div>
-						<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-1 font-title font-bold">The Shop</h2>
+						<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-2 font-title font-bold">The Shop</h2>
 						<h3 class="text-[9vw] md:text-6xl font-title font-bold text-white uppercase italic tracking-tighter leading-none">
 							Grooming <span class="font-accent italic font-light lowercase text-amber-200/50 block md:inline tracking-normal not-italic">Store</span>
 						</h3>
 					</div>
-					<p class="text-zinc-500 max-w-xs text-sm font-accent italic">Ritual diario de alta gama en casa.</p>
+					<p class="text-zinc-500 max-w-xs text-sm font-accent italic text-center">Ritual diario de alta gama en casa.</p>
 				</div>
-				<div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
 					<ProductCard tipo="Pomada" nombre="Matte Clay" imagen="https://images.unsplash.com/photo-1590159763121-7f9fd312190d?auto=format&fit=crop&q=80&w=400" />
 					<ProductCard tipo="Aceite" nombre="Beard Oil" imagen="https://images.unsplash.com/photo-1626285493836-339249767222?auto=format&fit=crop&q=80&w=400" />
 					<ProductCard tipo="Cera" nombre="Styling Wax" imagen="https://images.unsplash.com/photo-1634439064402-f38b2586b3e7?auto=format&fit=crop&q=80&w=400" />
@@ -117,8 +117,50 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<Footer />
+		<section id="galeria" class="py-16 md:py-20 bg-black px-6">
+			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 reveal">
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=500" alt="Corte 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=500" alt="Corte 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=500" alt="Corte 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+				<div class="aspect-[3/4] bg-zinc-900 overflow-hidden group">
+					<img src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Corte 4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100" />
+				</div>
+			</div>
+		</section>
+
+		<section id="citas" class="py-16 md:py-32 bg-[#050505] text-center px-6 relative overflow-hidden">
+			<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+			<div class="max-w-3xl mx-auto relative z-10 reveal">
+				<h2 class="text-amber-500 tracking-premium uppercase text-[10px] mb-4 font-title font-bold">Disponibilidad</h2>
+				<h3 class="text-4xl md:text-6xl font-title font-bold text-white uppercase mb-8">Reserva tu <span class="font-accent italic font-light lowercase text-amber-200/50">Turno</span></h3>
+				<p class="text-zinc-400 text-lg mb-12 font-sans font-extralight leading-relaxed">
+					Asegura tu espacio y evita esperas. Nuestro equipo está listo para brindarte el mejor servicio personalizado.
+				</p>
+				<a href="https://wa.me/51930667583?text=Hola%20PortoFino!%20💈%20Vengo%20de%20la%20página%20web%20y%20me%20gustaría%20agendar%20una%20cita%20para%20un%20servicio%20premium." target="_blank" class="inline-block group relative px-12 py-5 bg-amber-500 text-black font-bold uppercase text-xs tracking-premium overflow-hidden transition-all duration-300 font-sans">
+					<span class="relative z-10 group-hover:text-white transition-colors duration-300">Agendar por WhatsApp</span>
+					<div class="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+				</a>
+				<div class="mt-12 flex justify-center gap-8 text-zinc-500 text-[10px] uppercase tracking-widest font-sans font-medium">
+					<div class="flex flex-col gap-2">
+						<span class="text-amber-500/50">Lunes - Sábado</span>
+						<span>10:00 AM - 10:00 PM</span>
+					</div>
+					<div class="w-px h-8 bg-white/10"></div>
+					<div class="flex flex-col gap-2">
+						<span class="text-amber-500/50">Domingo</span>
+						<span>11:00 AM - 07:00 PM</span>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
+	<Footer />
 </Layout>
 
 <script>
@@ -138,24 +180,30 @@ import Footer from '../components/Footer.astro';
 </script>
 
 <style is:global>
-	/* Forzar alturas y eliminar espacios fantasmas */
-	#servicios .reveal-step, #club .reveal-step { display: flex !important; }
-	#servicios .reveal-step > div, #club .reveal-step > div { 
-		display: flex !important; 
-		flex-direction: column !important; 
-		width: 100% !important; 
-		height: 100% !important; 
-	}
-	#servicios article, #club article { height: 100% !important; flex: 1 1 auto; }
-
-	/* REDUCCIÓN DE DISTANCIA FINAL */
-	@media (max-width: 768px) {
-		section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-		.reveal-step { margin-bottom: 1rem; }
+	/* Mantiene altura idéntica en todas las tarjetas */
+	#servicios .reveal-step, 
+	#club .reveal-step {
+		display: flex !important;
 	}
 
-	.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+	#servicios .reveal-step > div,
+	#club .reveal-step > div {
+		display: flex !important;
+		flex-direction: column !important;
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+	#servicios .reveal-step > div > *,
+	#club .reveal-step > div > * {
+		flex: 1 1 auto !important;
+		height: 100% !important;
+		display: flex !important;
+		flex-direction: column !important;
+	}
+
+	.reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
 	.reveal.active { opacity: 1; transform: translateY(0); }
-	.reveal-step { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+	.reveal-step { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
 	.reveal-step.active { opacity: 1; transform: translateY(0); }
 </style>

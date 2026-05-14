@@ -11,7 +11,6 @@ import Footer from '../components/Footer.astro';
 	<Navbar />
 	
 	<main class="bg-black">
-		<!-- Hero Section -->
 		<section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
 			<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-[2]"></div>
 			<div id="hero-bg" class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1920')] bg-cover bg-center opacity-50 z-[1] will-change-transform scale-105"></div>
@@ -34,7 +33,6 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Frase de Autor -->
 		<section class="py-16 md:py-20 bg-black text-center px-6">
 			<div class="max-w-4xl mx-auto reveal">
 				<span class="text-amber-500/30 text-6xl font-accent italic">“</span>
@@ -44,7 +42,6 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Sección de Servicios -->
 		<section id="servicios" class="relative py-16 md:py-32 px-6 bg-[#050505]">
 			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 md:h-32 bg-gradient-to-b from-amber-500/50 to-transparent"></div>
 			<div class="max-w-6xl mx-auto">
@@ -74,7 +71,6 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Sección de Club -->
 		<section id="club" class="py-16 md:py-32 px-6 bg-black">
 			<div class="max-w-6xl mx-auto">
 				<div class="text-center mb-12 md:mb-16 reveal">
@@ -101,7 +97,6 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<!-- Sección de Productos corregida -->
 		<section id="productos" class="py-16 md:py-32 px-6 bg-[#050505]">
 			<div class="max-w-6xl mx-auto">
 				<div class="flex flex-col items-center text-center mb-12 md:mb-16 gap-4 reveal">
@@ -111,7 +106,7 @@ import Footer from '../components/Footer.astro';
 							Grooming <span class="font-accent italic font-light lowercase text-amber-200/50 block md:inline tracking-normal not-italic">Store</span>
 						</h3>
 					</div>
-					<p class="text-zinc-500 max-w-xs text-sm font-accent italic">Ritual diario de alta gama en casa.</p>
+					<p class="text-zinc-500 max-w-xs text-sm font-accent italic text-center">Ritual diario de alta gama en casa.</p>
 				</div>
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
 					<ProductCard tipo="Pomada" nombre="Matte Clay" imagen="https://images.unsplash.com/photo-1590159763121-7f9fd312190d?auto=format&fit=crop&q=80&w=400" />
@@ -185,6 +180,7 @@ import Footer from '../components/Footer.astro';
 </script>
 
 <style is:global>
+	/* Mantiene altura idéntica en todas las tarjetas */
 	#servicios .reveal-step, 
 	#club .reveal-step {
 		display: flex !important;
